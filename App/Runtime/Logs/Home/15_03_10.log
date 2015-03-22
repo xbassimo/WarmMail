@@ -1,0 +1,6 @@
+[ 2015-03-10T21:09:38+08:00 ] 127.0.0.1 /WarmMail/index.php/Home/Index/chklogin
+ERR: 非法操作:chklogin
+
+[ 2015-03-10T21:11:01+08:00 ] 127.0.0.1 /WarmMail/index.php/home/index/login
+ERR: 模板不存在:./App/Home/View/Index/login.html
+

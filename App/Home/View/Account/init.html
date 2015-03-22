@@ -1,0 +1,79 @@
+	<!-- content -->
+	<import type="css" file="css.validform" />
+	<script type="text/javascript">
+		$(function(){
+			$("#setAccount_form").Validform({
+				btnSubmit:"#sub", 
+				tiptype:3,
+				showAllError: true
+			});
+		})
+	</script>
+<div align="center">
+  <form id="setAccount_form" method="post" action="__CONTROLLER__/setup">
+  <table bgcolor="#cccccc" cellpadding="6" cellspacing="0" border="0">
+   <tr>
+     <th colspan="2" bgcolor="#ff6600">{$title}</th>
+     <input type="hidden" name="accountid" value="{$account_info.accountid|default=''}" />
+   </tr>
+   <tr>
+     <td>Server Name:</td>
+     <td><input type="text" name="server" maxlength="30" value="{$account_info.server|default=''}" datatype="*1-30" nullmsg="请输入服务商" errormsg="请输入正确的邮件服务提供商"></td>
+   </tr>
+   <tr>
+     <td>Port Number:</td>
+     <td><input type="text" name="port" maxlength="5" value="{$account_info.port|default=''}" datatype="n2-5" errormsg="请输入2~5位数字端口号" nullmsg="请输入端口号"></td>
+   </tr>
+   <tr>
+     <td>Server Type:</td>
+       <td><select name="type">
+      <switch name="$account_info.type" >
+      <case value="POP3">
+			   <option value="POP3" checked="checked">POP3</option>
+			   <option value="IMAP">IMAP</option>
+      </case>
+      <case value="IMAP">
+      <option value="POP3">POP3</option>
+      <option value="IMAP" checked="IMAP">IMAP</option>
+      </case>
+      <default />
+      <option value="POP3">POP3</option>
+      <option value="IMAP">IMAP</option>
+      </switch>
+		</select></td>
+     </td>
+   </tr>
+   <tr>
+     <td>User Name:</td>
+     <td><input type="text" name="remoteuser" value="{$account_info.remoteuser|default=''}" datatype="*1-30" nullmsg="请输入登录邮箱的账号名"></td>
+   </tr>
+   <tr>
+     <td>Password:</td>
+     <td><input type="password" name="remotepassword" value="{$account_info.remotepassword|default=''}" datatype="*1-25" nullmsg="请输入密码"></td>
+   </tr>
+   <input type="hidden" name="accountid" value="">
+    <if condition="$init neq 1">
+    <tr>
+    	<td align="center">
+			<input type="image" src="__IMG__/save-changes.gif" border="0" width="149" height="43"alt="{:ucwords('save changes')}"></a>
+    	</td>
+    </form>
+    <form action="__CONTROLLER__/delete" method="post">
+		<input type="hidden" name="accountid" value="{$account_info.accountid|default=''}">
+        <td align="center">
+			<input type="image" src="__IMG__/delete-account.gif" border="0" width="149" height="43" alt="{:ucwords('delete account')}"></a>
+    	</td>
+    </form>
+    </tr>
+	<else />
+	<tr>
+    	<td colspan="2" align="center">
+				<input type="image" src="__IMG__/save-changes.gif" border="0" width="149" height="43" alt="{:ucwords('save changes')}"></a>
+    	</td>
+	</form>
+    </tr>
+	</if>
+</table>
+</div>
+<br />
+

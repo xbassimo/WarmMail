@@ -1,0 +1,14 @@
+	<!-- content -->
+	<table width="100%" cellspacing="0" cellpadding="6" border="0">
+    <volist name="account_info" id="val" key="k">
+    <tr>
+    <if condition="$k%2 eq 1">
+    <td bgcolor="#ffffff" >
+    <else />
+    <td bgcolor="#ffffcc" >
+    </if>
+    邮箱：<a href="__CONTROLLER__/display?account_id={$val.accountid}">{$val.type}--{$val.remoteuser}@{$val.server}:{$val.port}</a>&nbsp;(default)</td></tr>
+
+    </volist >
+  </table>
+
