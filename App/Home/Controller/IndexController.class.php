@@ -12,7 +12,7 @@ class IndexController extends BaseController {
 		}else {
 			$this->redirect('Home/Account/init', 3, '请先设置一个邮箱账号');
 		}
-		
+		echo 1;
 		$this->assign('title','Warm Mail -- View Mailbox');
 		$this->assign('is_login',1);
     	$this->display();
