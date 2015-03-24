@@ -27,7 +27,7 @@
 	<table width="100%" cellpadding="0" cellspacing="0" border="0">
 			<tr>
         <td bgcolor="#ccccc" align="">
-			<a href="$url"><img src="/WarmMail/Public/images/view-mailbox.gif" border="0" width="149" height="43" alt="" /></a>
+			<a href="/WarmMail/Home/Index/index"><img src="/WarmMail/Public/images/view-mailbox.gif" border="0" width="149" height="43" alt="" /></a>
 			<a href="$url"><img src="/WarmMail/Public/images/new-message.gif" border="0" width="149" height="43" alt="" /></a>
 			<a href="/WarmMail/Home/Account/list"><img src="/WarmMail/Public/images/account-setup.gif" border="0" width="149" height="43" alt="" /></a>
 			<?php if($is_login == 1): ?><img src="/WarmMail/Public/images/spacer.gif" border="0" width="549" height="43" alt="" />

@@ -1,0 +1,102 @@
+Wed Mar 25 03:11:22 CST 2015
+  866  shutdown -h now
+  867  cd /var/www/
+  868  ll
+  869  chmod go+w html/
+  870  ll
+  871  exit
+  872  cd /etc/
+  873  vi passwd
+  874  vi group
+  875  exit
+  876  cd /etc/
+  877  . ./group
+  878  vi group
+  879  ifup eth0
+  880  shutdown -h now &
+  881  cd /etc/passwd
+  882  cd /etc/
+  883  vi passwd
+  884  vi group
+  885  groups
+  886  exit
+  887  cd /etc/
+  888  ls
+  889  vi group
+  890  usermod -G wxb wangxb
+  891  vi group
+  892  exit
+  893  cd /etc/
+  894  grep gshadow
+  895  vi gshadow
+  896  cd /etc/issue
+  897  cat /etc/issue
+  898  ifup eth0
+  899  shutdown -r now
+  900  gpasswd -A wangxb wangxb
+  901  gpasswd -A wxb wxb
+  902  cd /var/
+  903  ls
+  904  cd www/
+  905  ll
+  906  cd html/
+  907  ll
+  908  cd WarmMail/
+  909  ls
+  910  ll
+  911  vi test.php
+  912  ll
+  913  rn test.php 
+  914  rm test.php 
+  915  exit
+Wed Mar 25 03:12:47 CST 2015
+  909  vi group
+  910  exit
+  911  groupmod -G wangxb wxb
+  912  usermod -G wangxb wxb
+  913  vi /etc/group
+  914  cd /var/
+  915  ls
+  916  cd www/
+  917  ls
+  918  ll
+  919  cd html/
+  920  ls
+  921  ll
+  922  cd WarmMail/
+  923  ll
+  924  cd ../
+  925  ll
+  926  chggrp dev_group WarmMail/
+  927  chgrp dev_group WarmMail/
+  928  ll
+  929  chmod 2775 WarmMail/
+  930  ll
+  931  cd WarmMail/
+  932  ll
+  933  man chuser
+  934  man chmod
+  935  cd ../
+  936  chown -R WarmMail/
+  937  chown -R WarmMail
+  938  ll
+  939  chown -R WarmMail/
+  940  chown --help
+  941  :ll
+  942  ll
+  943  cd WarmMail/
+  944  ls
+  945  ll
+  946  cd ../
+  947  chgrp -R dev_group WarmMail/
+  948  ll
+  949  cd WarmMail/
+  950  ll
+  951  cd ../
+  952  chown -R wangxb
+  953  chown -R wangxb WarmMail/
+  954  ll
+  955  cd WarmMail/
+  956  ll
+  957  rm test.php 
+  958  ls
