@@ -1,4 +1,4 @@
 *.bak
 .myhistory
-App/Runtime/Cache/Home/*.php
+App/Runtime/
 
