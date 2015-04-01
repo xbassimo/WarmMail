@@ -37,13 +37,37 @@
     </table>
 
     	<!-- content -->
-	<table width="100%" cellspacing="0" cellpadding="6" border="0">
-    <?php if(is_array($account_info)): $k = 0; $__LIST__ = $account_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($k % 2 );++$k;?><tr>
-    <?php if($k%2 == 1): ?><td bgcolor="#ffffff" >
-    <?php else: ?>
-    <td bgcolor="#ffffcc" ><?php endif; ?>
-    邮箱：<a href="/WarmMail/index.php/Home/Account/display?account_id=<?php echo ($val["accountid"]); ?>"><?php echo ($val["type"]); ?>--<?php echo ($val["remoteuser"]); ?>@<?php echo ($val["server"]); ?>:<?php echo ($val["port"]); ?></a>&nbsp;(default)</td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
-  </table>
+	<link rel="stylesheet" type="text/css" href="/WarmMail/Public/css/validform.css" />
+	<script type="text/javascript">
+		$(function(){
+			$(".login_form").Validform({
+				btnSubmit:"#sub", 
+				tiptype:3,
+				showAllError: true
+			});
+		})
+	</script>
+	<div align="center">
+    	<form class="login_form" method="post" action="/WarmMail/index.php/Home/Login/chklogin">
+		<table bgcolor="#cccccc" border="0" cellpadding="6" cellspacing="0">
+        	<tr>
+        	<th colspan="2" bgcolor="#ff6600"><p>Please Log In</p></th>
+        	</tr>
+        	<tr>
+        	<td>Username:</td>
+        	<td><input type="text" name="username" datatype="s5-12" errormsg="用户名是5~12位字符！" nullmsg="请输入用户名" /></td><span class="Validform_checktip"></span></tr>
+        	<tr>
+        	<td>Password:</td>
+        	<td><input type="password" name="passwd" datatype="*6-16" errormsg="密码是6~16位任意字符" nullmsg="密码不能为空"/></td></tr>
+        	<tr>
+			<td colspan="2" align="center">
+				<a id="sub"><input type="image" src="/WarmMail/Public/images/log-in.gif" border="0" width="149" height="43" alt="Login In"></a>
+			</td></tr>
+			<tr>
+		</table>
+		</form>
+	</div>
+
 
 
 
