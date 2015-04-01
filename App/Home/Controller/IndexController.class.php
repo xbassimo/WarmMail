@@ -7,6 +7,7 @@ class IndexController extends BaseController {
 		
 		$where['username'] = session('username');
 		$res = D('Account')->where($where)->select();
+		echo 1;
 		if($res) {
 			
 		}else {
