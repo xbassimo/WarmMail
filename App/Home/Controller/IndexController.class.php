@@ -11,7 +11,9 @@ class IndexController extends BaseController {
 			echo "windows update";
 			echo "windows update";
 			echo "windows update";
-			echo "Linuxupdate";
+			echo "Linux update";
+			echo "Linux update 3";
+			echo "Linux update 4";
 			
 		}else {
 			$this->redirect('Home/Account/init', 3, '请先设置一个邮箱账号');
