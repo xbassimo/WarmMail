@@ -1,3 +1,0 @@
-[ 2015-03-25T04:23:08+08:00 ] 192.168.10.1 /WarmMail/index.php/Home/Login/chklogin
-ERR: SQLSTATE[28000] [1045] Access denied for user 'mail'@'localhost' (using password: YES)
-
