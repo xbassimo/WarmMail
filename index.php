@@ -31,7 +31,7 @@ $data = xhprof_disable();
 $xhprof_root = "/var/www/html";//这里填写的就是你的xhprof的路径
 
 include_once $xhprof_root."/xhprof_lib/utils/xhprof_lib.php";
-include_once $xhprof_root."/xhprof_lib/utils/xhprof_runs.php";
+include_once $xhprof_root."/xhprof_lib/utils/xhprof_runs.f";
 
 $xhprof_runs = new XHprofRuns_Default();
 $xhp_trace = 'tp_xhp_trace';
